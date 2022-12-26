@@ -1,0 +1,164 @@
+/* Styles pour la page de chargement */
+#loading-page {
+    position: fixed; /* Fixe la position de l'élément */
+    top: 0; /* Place l'élément en haut de la page */
+    left: 0; /* Place l'élément à gauche de la page */
+    width: 100%; /* Prend toute la largeur de la page */
+    height: 100%; /* Prend toute la hauteur de la page */
+    background-color: #2c2f33; /* Couleur de fond */
+    display: flex; /* Permet de centrer l'élément horizontalement */
+    align-items: center; /* Centre l'élément verticalement */
+    justify-content: center; /* Centre l'élément horizontalement */
+  }
+  
+  #loading-page h1 {
+    color: white; /* Couleur du texte */
+    font-family: 'Roboto', sans-serif; /* Police d'écriture */
+    animation: blink 2s infinite; /* Animation de clignotement */
+  }
+  
+  /* Animation de clignotement */
+  @keyframes blink {
+    50% {
+      color: transparent; /* Rend le texte transparent pendant la moitié de la durée de l'animation */
+    }
+  }
+
+
+/* Définition des styles pour le site */
+body {
+    background-color: #2c2f33;
+    display: flex; /* Permet de disposer les éléments côte à côte */
+    font-family: 'Roboto', sans-serif;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+  .left {
+    width: 25%;
+    padding: 20px;
+    text-align: center; /* Centre le contenu de la colonne */
+    align-items: center; /* Centre les éléments verticalement */
+    display: flex;
+    flex-direction: column; /* Affiche les informations de profil et les icônes de réseaux sociaux de haut en bas */
+    margin: auto; /* Centre le contenu de la colonne */
+    margin-top: 100px;
+  }
+  
+  .left img {
+    border-radius: 50%; /* Rond pour la photo de profil */
+    width: 100%; /* Prend toute la largeur de la colonne */
+    height: auto; /* Adapte la hauteur en fonction de la largeur */
+    transition: all 0.3s ease; /* Ajoute une animation de 0.3 secondes pour toutes les propriétés qui changent */
+    opacity: 1; /* Opacité de base de la photo de profil */
+  }
+  
+  .left img:hover {
+    opacity: 0.3; /* Opacité lorsque la souris est sur la photo de profil */
+  }
+  
+  .left .profile-info {
+    display: flex;
+    flex-direction: column; /* Affiche les informations de profil de haut en bas */
+    align-items: center; /* Centre les informations de profil horizontalement */
+    display: flex; /* Permet d'utiliser les propriétés flex sur les informations de profil */
+    justify-content: space-between; /* Aligne les informations de profil et les boutons à droite de la page */
+  }
+  
+  .left .location {
+    font-size: 16px;
+    color: #7A7C80;
+  }
+  
+  .left .social-icons {
+    margin-top: 20px; /* Ajoute un espace entre les informations de profil et les icônes de réseaux sociaux */
+  }
+  
+  .left .social-icons a {
+    color: #7A7C80;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .left h1 {
+    color: white;
+  }  
+  
+/* Styles pour la partie droite du site */
+.right {
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre l'élément horizontalement */
+    margin: auto; /* Centre le contenu de la colonne */
+    text-align: center; /* Centre le contenu de la colonne */
+    margin-top: 200px;
+
+  }
+  
+  .right h2 {
+    font-size: 20px;
+    color: white;
+    margin: 10px 0;
+  }
+  
+  
+  .right h2:hover {
+        cursor: pointer; /* Affiche un curseur en forme de main lorsque la souris est sur l'onglet */
+        background-color: rgba(0, 0, 0, 0.1); /* Assombrissement léger de l'arrière-plan */
+      }
+  .right h2:before {
+    content: "+"; /* Affiche un "+" avant le titre */
+    margin-right: 10px;
+  }
+  .right h2.open:before {
+    content: "-"; /* Affiche un "-" si l'onglet est ouvert */
+  }
+  .right .content {
+  display: none; /* Cache le contenu par défaut */
+}
+.right .content.open {
+  display: block; /* Affiche le contenu si l'onglet est ouvert */
+}
+  /* Styles pour la bordure autour des onglets */
+  .right .content,
+  .right h2 {
+    border: 1px solid #7A7C80;
+    border-radius: 5px;
+    padding: 10px;
+    transition: height 0.5s; 
+  }
+  
+  /* Styles pour le contenu de chaque onglet */
+  .right .content {
+    background-color: #23272a;
+    color: #7A7C80;
+    transition: height 0.5s; 
+    
+  }
+  .social-icons a {
+    color: #7A7C80;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  .social-icons a:hover {
+    color: #555;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #7A7C80; /* Couleur du texte par défaut */
+    text-align: center;
+    padding: 10px;
+    transition: color 0.5s; /* Ajoute une animation de 0.5s pour la couleur lorsque la souris est dessus */
+  }
+  
+  footer:hover {
+    color: white; /* Couleur du texte lorsque la souris est dessus */
+  }
+  
