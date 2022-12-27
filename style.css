@@ -73,6 +73,8 @@ body {
   
   .left .social-icons {
     margin-top: 20px; /* Ajoute un espace entre les informations de profil et les icônes de réseaux sociaux */
+    display: flex;
+    justify-content: space-between; /* Répartit l'espace équitablement entre les icônes */
   }
   
   .left .social-icons a {
